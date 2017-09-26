@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders ServiceTeaser snapshot 1`] = `
+.c0 {
+  color: blue;
+}
+
+.c1 {
+  font-size: 50px;
+}
+
+<div
+  className="c0"
+>
+  <img
+    alt="dfgsdfg1"
+    src="https://unsplash.it/300/200?image=957"
+  />
+  <h3
+    className="c1"
+    onClick={[Function]}
+  >
+    Haus
+  </h3>
+  <p>
+    Für einen hübschen Garten und gesunde Pflanzen.
+  </p>
+</div>
+`;

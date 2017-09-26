@@ -1,0 +1,41 @@
+{
+  "name": "static-export-basis-setup",
+  "version": "0.1.0",
+  "private": true,
+  "main": "server.js",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "next": "^3.2.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.13",
+    "styled-components": "^2.1.2"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.2.0",
+    "husky": "^0.14.3",
+    "jest-styled-components": "^4.6.0",
+    "lint-staged": "^4.2.3",
+    "prettier": "^1.7.0",
+    "react-styleguidist": "^6.0.25",
+    "react-test-renderer": "^15.6.1",
+    "serve": "^6.1.0",
+    "webpack": "^3.6.0"
+  },
+  "scripts": {
+    "test": "react-scripts test --env=jsdom",
+    "coverage": "react-scripts test --coverage",
+    "styleguide": "styleguidist server",
+    "dev": "node .",
+    "build": "next build && next export",
+    "prestart": "npm run build",
+    "start": "serve out",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write --print-width 120 --single-quote --trailing-comma es5",
+      "git add"
+    ]
+  }
+}

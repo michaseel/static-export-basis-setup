@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default TeaserPost snapshot 1`] = `
+.c0 {
+  color: red;
+}
+
+<article>
+  <h2
+    className="c0"
+  >
+    Lorem
+  </h2>
+  <p>
+    ipsum
+  </p>
+  <a
+    href="/post/1"
+    onClick={[Function]}
+  >
+    Read more...
+  </a>
+</article>
+`;
