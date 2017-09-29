@@ -1,0 +1,9 @@
+{
+  "integrates_react-i18next": "fraaaaaanz this sample integrates react-i18next for simple internationalization.",
+  "pureComponent": "fr You can either pass t function to child components.",
+  "extendedComponent": "fr Or wrap your component using the translate hoc provided by react-i18next.",
+  "kochen": "cuisine",
+  "rezept": "frezept",
+  "homepage": "Fr Homepage",
+  "locale": "fr"
+}

@@ -1,0 +1,7 @@
+{
+  "homepage": "homepage",
+  "integrates_react-i18next": "integrates_react-i18next",
+  "locale": "locale",
+  "rezept": "rezept",
+  "kochen": "kochen"
+}

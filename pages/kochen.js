@@ -6,7 +6,7 @@ import i18n from '../i18n'
 
 import TeaserPost from '../src/components/molecules/TeaserPost/TeaserPost';
 
-class Index extends Component {
+class Kochen extends Component {
   static async getInitialProps ({req}) {
     if (typeof req !== undefined && !process.browser) return i18n.getInitialProps(req, ['home', 'common']);
     else return {}
@@ -16,20 +16,20 @@ class Index extends Component {
     return (
       <main>
         <Head>
-          <title>{this.props.t('common:homepage')}</title>
+          <title>{this.props.t('common:kochen')}</title>
         </Head>
 
-        <h1>{this.props.t('common:homepage')}</h1>
+        <h1>{this.props.t('common:kochen')}</h1>
         <h2>{this.props.t('common:integrates_react-i18next')}</h2>
 
         <TeaserPost title={"hello"} />
 
-        <a href={"/de/rezept"}>Deutsch</a><br />
-        <a href={"/fr/frezept"}>Französisch</a><br />
-        <a href={"/it/italrezept"}>Italienisch</a><br />
+        <a href={"/de/kochen"}>Deutsch</a><br />
+        <a href={"/fr/cuisine"}>Französisch</a><br />
+        <a href={"/it/itkochen"}>Italienisch</a><br />
       </main>
     )
   }
 }
 
-export default translate(['home', 'common'], { i18n, wait: process.browser })(Index)
+export default translate(['home', 'common'], { i18n, wait: process.browser })(Kochen)
