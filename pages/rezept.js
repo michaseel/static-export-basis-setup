@@ -7,8 +7,8 @@ import i18n from '../i18n'
 import TeaserPost from '../src/components/molecules/TeaserPost/TeaserPost';
 
 class Rezept extends Component {
-  static async getInitialProps ({req, query}) {
-    if (typeof req !== undefined && !process.browser) return i18n.getInitialProps(req, ['home', 'common']);
+  static async getInitialProps ({req}) {
+    if (typeof req !== undefined && !process.browser) return i18n.getInitialProps(req, ['home', 'common', 'page2']);
     else return {}
   }
 
@@ -20,6 +20,7 @@ class Rezept extends Component {
         </Head>
 
         <h1>{this.props.t('common:rezept')}</h1>
+        <h1>{this.props.t('page2:welcomePage2')}</h1>
         <h2>{this.props.t('common:integrates_react-i18next')}</h2>
 
         <TeaserPost title={"hello"} />
@@ -32,4 +33,4 @@ class Rezept extends Component {
   }
 }
 
-export default translate(['home', 'common'], { i18n, wait: process.browser })(Rezept)
+export default translate(['home', 'common', 'page2'], { i18n, wait: process.browser })(Rezept)

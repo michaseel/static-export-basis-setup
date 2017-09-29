@@ -12,6 +12,10 @@ const options = {
 
   debug: true,
   saveMissing: true,
+  backend: {
+    loadPath: '/static/locales/{{lng}}/{{ns}}.json',
+    addPath: '/static/locales/{{lng}}/{{ns}}.missing.json',
+  },
 
   detection: {
     order: ['path', 'querystring'],
@@ -30,7 +34,7 @@ const options = {
 };
 
 // for browser use xhr backend to load translations and browser lng detector
-if (false && process.browser) {
+if (process.browser) {
   i18n
     .use(XHR)
     // .use(Cache)

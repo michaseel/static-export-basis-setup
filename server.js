@@ -23,8 +23,8 @@ i18n
       lookupFromPathIndex: 0,
     },
     backend: {
-      loadPath: path.join(__dirname, '/locales/{{lng}}/{{ns}}.json'),
-      addPath: path.join(__dirname, '/locales/{{lng}}/{{ns}}.missing.json')
+      loadPath: path.join(__dirname, '/static/locales/{{lng}}/{{ns}}.json'),
+      addPath: path.join(__dirname, '/static/locales/{{lng}}/{{ns}}.missing.json')
     },
   }, () => {
     app.prepare()
@@ -35,10 +35,10 @@ i18n
         server.use(i18nextMiddleware.handle(i18n));
 
         // serve locales for client
-        server.use('/locales', express.static(path.join(__dirname, '/locales')));
+        server.use('/static/locales', express.static(path.join(__dirname, '/static/locales')));
 
         // missing keys
-        server.post('/locales/add/:lng/:ns', i18nextMiddleware.missingKeyHandler(i18n));
+        server.post('/static/locales/add/:lng/:ns', i18nextMiddleware.missingKeyHandler(i18n));
 
         i18nextMiddleware.addRoute(i18n, '/:lng', ['de', 'fr', 'it'], server, 'get', function(req, res) {
           return app.render(req, res, '/')

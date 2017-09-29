@@ -1,10 +1,3 @@
-const fetch = require('isomorphic-fetch');
-const i18n = require('./i18n')
-const path = require('path');
-
-const Backend = require('i18next-node-fs-backend')
-
-
 module.exports = {
 
 
